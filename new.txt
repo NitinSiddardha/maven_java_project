@@ -1,4 +1,4 @@
-jenkins pipeline script -
+->jenkins pipeline script -
 pipeline {
     agent any
     tools { maven 'MAVEN3' }
@@ -16,3 +16,9 @@ pipeline {
         }
     }
 }
+->kubernets using minikube -
+minikube start
+kubectl create deployment mynginx --image=nginx
+kubectl expose deployment mynginx --port=80 --target-port=80
+kubectl port-forward service/mynginx 8090:80
+#kubectl scale deployment mynginx --replicas=4, kubectl get pods, kubectl describe pods
