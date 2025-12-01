@@ -1,6 +1,7 @@
 
 
-# jenkins pipeline script -
+
+jenkins pipeline script -
 pipeline {
     agent any
     tools { maven 'MAVEN3' }
